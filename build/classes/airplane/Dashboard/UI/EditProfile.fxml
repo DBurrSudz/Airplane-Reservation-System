@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airplane.Dashboard.UI.EditProfileController">
+   <children>
+      <JFXTextField fx:id="username" layoutX="93.0" layoutY="54.0" prefHeight="25.0" prefWidth="295.0" promptText="Username" />
+      <JFXTextField fx:id="firstname" layoutX="93.0" layoutY="110.0" prefHeight="25.0" prefWidth="295.0" promptText="Firstname" />
+      <JFXTextField fx:id="email" layoutX="93.0" layoutY="237.0" prefHeight="25.0" prefWidth="295.0" promptText="Email Address" />
+      <JFXTextField fx:id="age" layoutX="93.0" layoutY="415.0" prefHeight="25.0" prefWidth="295.0" promptText="Age" />
+      <JFXTextField fx:id="phone" layoutX="93.0" layoutY="472.0" prefHeight="25.0" prefWidth="295.0" promptText="Phone Number" />
+      <JFXTextField fx:id="lastname" layoutX="93.0" layoutY="172.0" prefHeight="25.0" prefWidth="295.0" promptText="Lastname" />
+      <JFXPasswordField fx:id="password" layoutX="93.0" layoutY="299.0" prefHeight="25.0" prefWidth="295.0" promptText="Password" />
+      <JFXPasswordField fx:id="confirmPassword" layoutX="93.0" layoutY="360.0" prefHeight="25.0" prefWidth="295.0" promptText="Confirm Password" />
+      <JFXTextArea fx:id="address" layoutX="411.0" layoutY="100.0" prefHeight="25.0" prefWidth="374.0" promptText="Address" />
+      <JFXButton fx:id="save" layoutX="637.0" layoutY="480.0" onAction="#saveChanges" prefHeight="35.0" prefWidth="148.0" text="Save Changes">
+         <graphic>
+            <MaterialDesignIconView glyphName="ACCOUNT_CHECK" size="30" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

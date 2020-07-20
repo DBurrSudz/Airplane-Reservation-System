@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airplane.Dashboard.UI.FlightsViewSecondPageController">
+   <children>
+      <MaterialDesignIconView fill="#949494" glyphName="ACCOUNT" layoutX="400.0" layoutY="79.0" size="35" text="" />
+      <Separator layoutX="411.0" layoutY="107.0" prefHeight="5.0" prefWidth="282.0" />
+      <Label layoutX="514.0" layoutY="92.0" text="Business Class" />
+      <MaterialDesignIconView fill="RED" glyphName="ACCOUNT" layoutX="535.0" layoutY="78.0" size="35" text="" />
+      <Label layoutX="445.0" layoutY="57.0" text="Reserved Seat" />
+      <Label layoutX="577.0" layoutY="57.0" text="Selected Seat" />
+      <Label layoutX="512.0" layoutY="303.0" text="Economy Class" />
+      <Separator layoutX="411.0" layoutY="320.0" prefHeight="5.0" prefWidth="282.0" />
+      <TextField fx:id="seats" layoutX="115.0" layoutY="152.0" />
+      <RadioButton fx:id="luggage" layoutX="115.0" layoutY="223.0" mnemonicParsing="false" text="Carry On Luggage" />
+      <Label layoutX="54.0" layoutY="156.0" text="Seats:" />
+      <JFXButton fx:id="bookFlight" layoutX="729.0" layoutY="500.0" onAction="#bookFlight" text="Book Flight" />
+      <MaterialDesignIconView glyphName="ACCOUNT" layoutX="665.0" layoutY="79.0" size="35" text="" />
+      <Label layoutX="707.0" layoutY="56.0" text="Available Seat" />
+      <Label layoutX="441.0" layoutY="127.0" text="A" />
+      <Label layoutX="490.0" layoutY="127.0" text="B" />
+      <Label layoutX="609.0" layoutY="127.0" text="C" />
+      <Label layoutX="661.0" layoutY="127.0" text="D" />
+      <Label layoutX="441.0" layoutY="325.0" text="E" />
+      <Label layoutX="490.0" layoutY="325.0" text="F" />
+      <Label layoutX="609.0" layoutY="325.0" text="G" />
+      <Label layoutX="661.0" layoutY="325.0" text="H" />
+      <Label layoutX="414.0" layoutY="161.0" text="1" />
+      <Label layoutX="414.0" layoutY="205.0" text="2" />
+      <Label layoutX="414.0" layoutY="250.0" text="3" />
+      <Label layoutX="689.0" layoutY="161.0" text="1" />
+      <Label layoutX="689.0" layoutY="205.0" text="2" />
+      <Label layoutX="689.0" layoutY="250.0" text="3" />
+      <Label layoutX="689.0" layoutY="355.0" text="1" />
+      <Label layoutX="689.0" layoutY="400.0" text="2" />
+      <Label layoutX="689.0" layoutY="442.0" text="3" />
+      <Label layoutX="414.0" layoutY="355.0" text="1" />
+      <Label layoutX="414.0" layoutY="400.0" text="2" />
+      <Label layoutX="414.0" layoutY="442.0" text="3" />
+      <CheckBox fx:id="business" layoutX="115.0" layoutY="303.0" mnemonicParsing="false" text="Business Class" />
+      <CheckBox fx:id="economy" layoutX="115.0" layoutY="338.0" mnemonicParsing="false" text="Economy Class" />
+      <Pane fx:id="businessPane" layoutX="375.0" layoutY="119.0" prefHeight="189.0" prefWidth="355.0">
+         <children>
+            <MaterialDesignIconView fx:id="A1" glyphName="ACCOUNT" layoutX="53.0" layoutY="61.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="B1" glyphName="ACCOUNT" layoutX="101.0" layoutY="61.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="A2" glyphName="ACCOUNT" layoutX="53.0" layoutY="107.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="B2" glyphName="ACCOUNT" layoutX="101.0" layoutY="107.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="A3" glyphName="ACCOUNT" layoutX="53.0" layoutY="149.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="B3" glyphName="ACCOUNT" layoutX="101.0" layoutY="149.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="C1" glyphName="ACCOUNT" layoutX="222.0" layoutY="61.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="D1" glyphName="ACCOUNT" layoutX="274.0" layoutY="61.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="C2" glyphName="ACCOUNT" layoutX="222.0" layoutY="107.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="D2" glyphName="ACCOUNT" layoutX="274.0" layoutY="107.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="C3" glyphName="ACCOUNT" layoutX="222.0" layoutY="149.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="D3" glyphName="ACCOUNT" layoutX="274.0" layoutY="149.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+         </children>
+      </Pane>
+      <Pane fx:id="economyPane" layoutX="374.0" layoutY="323.0" prefHeight="189.0" prefWidth="355.0">
+         <children>
+            <MaterialDesignIconView fx:id="E1" glyphName="ACCOUNT" layoutX="52.0" layoutY="51.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="F1" glyphName="ACCOUNT" layoutX="102.0" layoutY="51.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="E2" glyphName="ACCOUNT" layoutX="52.0" layoutY="97.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="F2" glyphName="ACCOUNT" layoutX="102.0" layoutY="97.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="E3" glyphName="ACCOUNT" layoutX="52.0" layoutY="142.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="F3" glyphName="ACCOUNT" layoutX="102.0" layoutY="142.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="G1" glyphName="ACCOUNT" layoutX="222.0" layoutY="51.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="H1" glyphName="ACCOUNT" layoutX="275.0" layoutY="51.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="G2" glyphName="ACCOUNT" layoutX="222.0" layoutY="97.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="H2" glyphName="ACCOUNT" layoutX="275.0" layoutY="97.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="G3" glyphName="ACCOUNT" layoutX="222.0" layoutY="142.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+            <MaterialDesignIconView fx:id="H3" glyphName="ACCOUNT" layoutX="275.0" layoutY="142.0" onMouseClicked="#selectSeat" size="35" style="-fx-fill: #000000;" text="" />
+         </children>
+      </Pane>
+      <FontAwesomeIconView fx:id="arrow" glyphName="ARROW_CIRCLE_LEFT" layoutX="48.0" layoutY="513.0" onMouseClicked="#back" size="25" />
+   </children>
+</AnchorPane>

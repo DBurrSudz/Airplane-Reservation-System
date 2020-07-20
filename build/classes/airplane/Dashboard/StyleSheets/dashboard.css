@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 4, 2020, 2:17:04 PM
+    Author     : danie
+*/
+
+
+.sidebar{
+    -fx-background-color: #2C3A47;
+}
+
+.sidebar-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: #CAD3C8;
+
+}
+
+.icons{
+    -fx-text-fill: #CAD3C8;
+}

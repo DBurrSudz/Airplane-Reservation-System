@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="737.0" style="-fx-background-color: #2D142C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airplane.Login.NewUserController">
+   <left>
+      <Pane prefHeight="400.0" prefWidth="227.0" style="-fx-background-color: #B33771;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton graphicTextGap="10.0" layoutX="10.0" layoutY="362.0" onAction="#goBack" text="Back" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="ARROW_LEFT" size="20" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="3.0" layoutY="26.0" prefHeight="70.0" prefWidth="222.0" text="Start Your High-Flying Experience With Us" textAlignment="CENTER" textFill="WHITE" underline="true" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Black" size="15.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" layoutX="44.0" layoutY="252.0" size="150" wrappingWidth="94.42856979370117" />
+         </children></Pane>
+   </left>
+   <center>
+      <Pane prefHeight="361.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="35.0" layoutY="35.0" text="Register" textFill="#6d214f">
+               <font>
+                  <Font name="Segoe UI Semibold" size="23.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="368.0" layoutY="357.0" onAction="#addUser" prefHeight="21.0" prefWidth="128.0" style="-fx-background-color: #6D214F;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="firstname" focusColor="#eab543" layoutX="35.0" layoutY="90.0" prefHeight="25.0" prefWidth="165.0" promptText="Firstname" unFocusColor="#6d214f" />
+            <JFXTextField fx:id="lastname" focusColor="#eab543" layoutX="35.0" layoutY="134.0" prefHeight="25.0" prefWidth="165.0" promptText="Lastname" unFocusColor="#6d214f" />
+            <JFXPasswordField fx:id="password" focusColor="#eab543" layoutX="34.0" layoutY="188.0" prefHeight="25.0" prefWidth="167.0" promptText="Password" unFocusColor="#6d214f" />
+            <JFXPasswordField fx:id="confirmPassword" focusColor="#eab543" layoutX="34.0" layoutY="237.0" prefHeight="25.0" prefWidth="167.0" promptText="Confirm Password" unFocusColor="#6d214f" />
+            <TextArea fx:id="address" layoutX="265.0" layoutY="263.0" prefHeight="71.0" prefWidth="231.0" style="-fx-background-color: #808080;" />
+            <Label layoutX="265.0" layoutY="241.0" text="Address" textFill="#6d214f" />
+            <JFXTextField fx:id="age" focusColor="#eab543" layoutX="265.0" layoutY="90.0" prefHeight="25.0" prefWidth="164.0" promptText="Age" unFocusColor="#6d214f" />
+            <JFXTextField fx:id="phone" focusColor="#eab543" layoutX="265.0" layoutY="134.0" prefHeight="25.0" prefWidth="164.0" promptText="Phone Number" unFocusColor="#6d214f" />
+            <JFXTextField fx:id="username" focusColor="#eab543" layoutX="35.0" layoutY="286.0" prefHeight="25.0" prefWidth="165.0" promptText="Username" unFocusColor="#6d214f" />
+            <JFXTextField fx:id="email" focusColor="#eab543" layoutX="265.0" layoutY="188.0" prefHeight="25.0" prefWidth="164.0" promptText="E-Mail" unFocusColor="#6d214f" />
+         </children></Pane>
+   </center>
+</BorderPane>

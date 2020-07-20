@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jul 09 18:27:44 COT 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0173-35e7-fe5a-000003996708 
+on database directory C:\Users\danie\Desktop\Java Practice\NetBeans\Airplane Reservation System\AirplaneDataBase with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/C:/Users/danie/Desktop/Java%20Practice/NetBeans/Airplane%20Reservation%20System/dist/run956669915/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_231-b11
+user.dir=C:\Users\danie\Desktop\Java Practice\NetBeans\Airplane Reservation System
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

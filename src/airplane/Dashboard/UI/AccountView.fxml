@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airplane.Dashboard.UI.AccountViewController">
+   <children>
+      <Label layoutX="111.0" layoutY="103.0" text="Account Summary">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="170.0" text="Account ID:" textFill="#aeaeae">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="214.0" text="Account Balance:" textFill="#aeaeae">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="192.0" layoutY="268.0" text="Account User:" textFill="#aeaeae">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="bill" layoutX="637.0" layoutY="472.0" onAction="#billAccount" prefHeight="36.0" prefWidth="105.0" text="Bill Account" />
+      <Label fx:id="accountIDLabel" layoutX="344.0" layoutY="171.0" text="Account ID:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountBalanceLabel" layoutX="344.0" layoutY="215.0" text="Account ID:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountUserLabel" layoutX="344.0" layoutY="269.0" text="Account ID:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

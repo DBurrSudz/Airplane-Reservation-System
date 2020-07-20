@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="536.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="airplane.Dashboard.UI.FlightsViewController">
+   <children>
+      <TextField fx:id="name" layoutX="148.0" layoutY="31.0" prefHeight="25.0" prefWidth="183.0" />
+      <TextField fx:id="origin" layoutX="148.0" layoutY="63.0" prefHeight="25.0" prefWidth="183.0" />
+      <Label layoutX="74.0" layoutY="35.0" text="Flight Name" />
+      <Label layoutX="74.0" layoutY="67.0" text="Origin" />
+      <Label layoutX="350.0" layoutY="35.0" text="Destination" />
+      <TextField fx:id="destination" layoutX="452.0" layoutY="31.0" prefHeight="25.0" prefWidth="183.0" />
+      <Label layoutX="350.0" layoutY="67.0" text="Airline Company" />
+      <TextField fx:id="airline" layoutX="452.0" layoutY="63.0" prefHeight="25.0" prefWidth="183.0" />
+      <JFXButton fx:id="search" layoutX="694.0" layoutY="489.0" onAction="#populateTable" prefHeight="35.0" prefWidth="33.0" text=" " />
+      <JFXButton fx:id="next" layoutX="763.0" layoutY="489.0" onAction="#nextPage" prefHeight="35.0" prefWidth="33.0" text=" ">
+         <graphic>
+            <FontAwesomeIconView glyphName="ARROW_CIRCLE_RIGHT" size="25" text="" />
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="table" layoutX="25.0" layoutY="102.0" prefHeight="378.0" prefWidth="772.0" />
+   </children>
+</AnchorPane>
