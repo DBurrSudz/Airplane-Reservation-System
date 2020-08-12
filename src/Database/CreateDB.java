@@ -23,12 +23,12 @@ public final class CreateDB{
     private static DatabaseMetaData dmb;
     private Statement statement = null;
     private static ResultSet results;
-    
-    
+
+
     /**
      * Constructor that creates connection to the database and sets up all the
      * tables in the schema.
-     * 
+     *
      */
     private CreateDB(){
         try{
@@ -38,8 +38,8 @@ public final class CreateDB{
             System.out.println(error);
         }
     }
-    
-    
+
+
     /**
      * Creates a database object to be used throughout the system.
      * @return The database object.
@@ -50,8 +50,8 @@ public final class CreateDB{
         }
         return handler;
     }
-    
-    
+
+
     /**
      * Private method to establish a connection to the database and creates a statement.
      */
@@ -61,14 +61,14 @@ public final class CreateDB{
             statement = connection.createStatement();
             dmb = connection.getMetaData();
         }
-        
+
         catch(SQLException error){
             System.out.println(error);
         }
-      
+
     }
-    
-    
+
+
     /**
      * Drops the connection to the database.
      */
@@ -81,9 +81,9 @@ public final class CreateDB{
         catch(SQLException error){
             System.out.println(error.getMessage());
         }
-       
+
     }
-	
+
     /**
      * Closes the statement of the handler instance.
     */
@@ -97,23 +97,18 @@ public final class CreateDB{
             System.out.println(error.getMessage());
         }
     }
-	
-	
+
+
 	/**
 	 * Setup the tables of the database.
 	 */
     public void setupTables(){
         try{
-            //dropTable("ACCOUNT");
-            //dropTable("BOOKING");
-            //dropTable("FLIGHT");
-            //dropTable("USERS");
             setupUser();
             setupFlight();
             setupBooking();
             setupAccount();
-            
-			
+
         }
         catch(SQLException error){
             System.out.println(error);
@@ -121,18 +116,18 @@ public final class CreateDB{
             if (suppressedExceptions.length > 0){
                 for(int i = 0; i <= suppressedExceptions.length;i++){
                     System.out.println(suppressedExceptions[i]+"\n");
-                }    
+                }
             }
-            
+
         }
         finally{
             closeStatement();
             dropConnection();
         }
-			
-		
+
+
     }
-    
+
     /**
      * Creates the USERS table in the database schema.
      * The responsibility of this table in the schema is to store all the valid
@@ -140,17 +135,17 @@ public final class CreateDB{
      * This table keeps track of the user's name, contacts, personal username and password and
      * address. The USERS table is also responsible to facilitate logging into the system.
      * @throws SQLException
-     * 
-     */ 
+     *
+     */
     private void setupUser() throws SQLException{
         TABLE_NAME = "USERS";
         results = dmb.getTables(null,null,TABLE_NAME.toUpperCase(),null);
         if (results.next()){
             System.out.println("The table " +TABLE_NAME+ " already exists.");
         }
-             
+
         else{
-            statement.execute("CREATE TABLE " +TABLE_NAME+"("+ 
+            statement.execute("CREATE TABLE " +TABLE_NAME+"("+
                                    "USR_ID varchar(200) NOT NULL PRIMARY KEY," +
                                    "USR_FNAME varchar(200) NOT NULL,"+
                                    "USR_LNAME varchar(200) NOT NULL,"+
@@ -160,12 +155,12 @@ public final class CreateDB{
                                    "USR_PHONE varchar(200) NOT NULL," +
                                    "USR_ADDRESS   varchar(500)  NOT NULL)");
             System.out.println("The table " +TABLE_NAME+ " has been created successfully.");
-        }   
-        
+        }
+
     }
 
-    
-    
+
+
     /**
      * Creates the ACCOUNT table in the database schema.
      * The responsibility of this table in the schema is to store all the
@@ -177,12 +172,12 @@ public final class CreateDB{
     private void setupAccount() throws SQLException{
         TABLE_NAME = "ACCOUNT";
         results = dmb.getTables(null, null, TABLE_NAME.toUpperCase(), null);
-        
+
         if (results.next()){
             System.out.println("The table " +TABLE_NAME+ " already exists.");
         }
-        
-        else{                                                               
+
+        else{
             statement.execute("CREATE TABLE " + TABLE_NAME + "(" +
                                   "ACC_NO varchar(600) NOT NULL PRIMARY KEY," +
                                   "ACC_BLNCE varchar(600) NOT NULL," +
@@ -191,10 +186,10 @@ public final class CreateDB{
             System.out.println("The table "+TABLE_NAME+" has been created successfully.");
         }
     }
-    
-    
+
+
     /**
-     * Creates the BOOKING table in the database schema. 
+     * Creates the BOOKING table in the database schema.
      * The responsibility of this table store the information of each booking
      * a user makes in a system. This table tracks the details of a booking which consists
      * of origin and destination information of a flight, the information about the users seating
@@ -223,12 +218,12 @@ public final class CreateDB{
                                   "FOREIGN KEY(USR_ID) REFERENCES USERS(USR_ID),"+
                                   "FL_ID varchar(100),"+
                                   "FOREIGN KEY(FL_ID) REFERENCES FLIGHT(FL_ID))");
-            System.out.println("The table "+TABLE_NAME+" has been created successfully");                
+            System.out.println("The table "+TABLE_NAME+" has been created successfully");
         }
-        
+
     }
-    
-    
+
+
     /**
      * Creates the FLIGHT table in the database schema. This table is responsible
      * for storing the information about the flights coming into and out of the airports.
@@ -257,15 +252,15 @@ public final class CreateDB{
                                   "FL_GATE varchar(10) NOT NULL,"+
                                   "FL_DAPORT varchar(10) NOT NULL,"+
                                   "FL_AAPORT varchar(10) NOT NULL)");
-            
-            
-                                  
+
+
+
             System.out.println("The table "+TABLE_NAME+" has been created successfully.");
         }
     }
-    
-    
- 
+
+
+
     /**
      * Drops a table within the database schema.
      * @param table The table to be dropped.
@@ -275,13 +270,13 @@ public final class CreateDB{
         statement = connection.createStatement();
         statement.executeUpdate("DROP TABLE " + table);
         System.out.println("Table " + table + " was dropped succesfully");
-        
-    
-        
+
+
+
     }
-    
-    
-    
+
+
+
     /**
      * Handles querying from controller classes.
      * @param query The SQL command to perform an action in the database.
@@ -291,17 +286,17 @@ public final class CreateDB{
     public ResultSet executeQuery(String query) throws SQLException{
         try{
             results = statement.executeQuery(query);
-            
+
         }
         catch(SQLException error){
             System.out.println(error);
             return null;
         }
-        return results;     
+        return results;
     }
-    
 
-    
+
+
     /**
      * Handles database actions from controller classes.
      * @param action The SQL command to perform an action in the database.
@@ -330,7 +325,7 @@ public final class CreateDB{
         try{
             results = statement.executeQuery("SELECT* FROM " + table);
             ResultSetMetaData resultMeta = results.getMetaData();
-            
+
             int columnCount = resultMeta.getColumnCount();
             for (int x = 1; x <= columnCount;x++) System.out.format("%30s", resultMeta.getColumnName(x) + "|");
             while (results.next()){
@@ -343,214 +338,9 @@ public final class CreateDB{
             System.out.println(error.getMessage());
 	}
     }
-    
+
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

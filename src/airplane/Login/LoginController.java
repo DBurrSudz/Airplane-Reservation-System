@@ -62,16 +62,6 @@ public class LoginController implements Initializable {
         registerPage = AirplaneReservationSystem.getRoot();
         dashboardPage = AirplaneReservationSystem.getRoot();
         window = AirplaneReservationSystem.getWindow();
-        
-        try{
-            handler = CreateDB.getHandler();
-            handler.createConnection();
-            handler.printTable("USERS");
-            handler.dropConnection();
-        } catch (SQLException ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-     
     }   
     
     
@@ -127,6 +117,7 @@ public class LoginController implements Initializable {
         }   
     }
 }
+
 
 
 
