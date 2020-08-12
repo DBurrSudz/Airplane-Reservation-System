@@ -9,5 +9,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-.manifest.mf
 
